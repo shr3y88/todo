@@ -1,0 +1,19 @@
+.footer {
+  background-color: rgb(207, 206, 207);;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+

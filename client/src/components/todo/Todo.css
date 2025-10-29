@@ -1,0 +1,302 @@
+
+.todo {
+  width: 100%;
+  min-height: 100vh;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+
+.todo-main {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  
+
+}
+
+.todo-main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+.todo-inputs-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+
+.todo-inputs {
+  
+  padding: 12px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(115, 30, 97, 0.2);
+  color: rgb(83, 81, 81);
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+.todo-inputs::placeholder {
+  color: rgb(80, 79, 79);
+  letter-spacing: 1px;
+}
+
+.todo-inputs:focus {
+  background: rgba(79, 31, 31, 0.25);
+  
+  transform: scale(1.04);
+}
+
+
+#textarea
+ {
+  display: none;
+}
+
+
+.btn-signup {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+  background: linear-gradient(135deg, #48cae4, #00b4d8);
+  box-shadow: 0 0 15px #00b4d8;
+  transform: translateY(-2px);
+}
+
+
+
+
+@media (max-width: 768px) {
+  .todo {
+    padding: 1.5rem;
+  }
+
+  .todo-main {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .todo-inputs {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .btn-signup {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-main {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .todo-inputs {
+    font-size: 13px;
+  }
+}
+/* Card gridd; container */
+.card-container {
+  background-color: rgb(10, 3, 73);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  
+ 
+  grid-template-columns: repeat(3, 1fr); /* 3columns on desktop */
+  gap: 20px;
+  transition: all 0.25s ease-in-out;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Each card */
+.card {
+  background-color: rgba(255, 255, 255, 0.1);;
+  padding: 16px;
+  border-radius: 10px;
+  width: 50vh ; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color:rgb(255, 251, 251);
+}
+
+
+
+
+/* Hide by default (if you still need this) */
+#card {
+  display: grid;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1100px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+.delete-update{
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 3px;
+  width: 30%;
+  margin-left: 15vh;
+  padding: 2px;
+  color: black;
+  gap:2vh;
+  
+}
+.delete:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.delete{
+  background: #a82121;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 3px;
+  width:60%;
+  color: black;
+  padding: 1px;
+}
+.update{
+  background: #565454;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 3px;
+  width:60%;
+  color: black;
+  padding: 1px;
+}
+.update:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+.update-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #fdfdfd;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Inner elements styling (optional) */
+.update-container input,
+.update-container textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .update-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .update-container input,
+  .update-container textarea {
+    max-width: 100%;
+  }
+}
+
+
+/* Full-page overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px); /* this blurs everything behind */
+  background-color: rgba(0,0,0,0.3); /* optional dark tint */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* make sure it's on top */
+  display: none;
+}
+
+/* The todo-update div */
+.todo-update {
+  background-color: rgba(255, 255, 255, 0.9); /* clear modal */
+  width: 50%;
+  max-width: 500px;
+  height: 50vh;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  position: relative;
+  
+}
+.cross{
+  position:absolute;
+  width:4%;
+  top:2vh;
+  right: 2vh;
+  
+}
+
